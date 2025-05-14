@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PierTrucker 网页版</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PierTrucker 集装箱查询</h1>
+        </header>
+        
+        <div id="loginSection" class="section">
+            <h2>登录</h2>
+            <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="email" id="email" value="nhn05k5aha@iwatermail.com">
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" value="123456aa">
+            </div>
+            <button id="loginBtn" class="btn">登录</button>
+            <p id="loginStatus"></p>
+        </div>
+        
+        <div id="containerSection" class="section hidden">
+            <h2>集装箱查询</h2>
+            <div class="table-container">
+                <table id="containerTable">
+                    <thead>
+                        <tr>
+                            <th>地点</th>
+                            <th>集装箱号</th>
+                            <th>结果</th>
+                            <th>航线</th>
+                            <th>尺寸</th>
+                            <th>位置</th>
+                            <th>LFD</th>
+                            <th>预约</th>
+                        </tr>
+                    </thead>
+                    <tbody id="containerBody">
+                        <tr>
+                            <td>
+                                <select class="place-select">
+                                    <option value="lbct">LBCT</option>
+                                    <option value="trapac">TraPac</option>
+                                    <option value="wbct">WBCT</option>
+                                    <option value="yti">YTI</option>
+                                    <option value="everport">Everport</option>
+                                    <option value="apm">APM</option>
+                                    <option value="ictf">ICTF</option>
+                                    <option value="lbct2">LBCT 2</option>
+                                </select>
+                            </td>
+                            <td><input type="text" class="container-input"></td>
+                            <td class="result"></td>
+                            <td class="line"></td>
+                            <td class="size"></td>
+                            <td class="location"></td>
+                            <td class="lfd"></td>
+                            <td class="appt"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="buttons">
+                <button id="addRowBtn" class="btn">添加行</button>
+                <button id="checkAllBtn" class="btn primary">查询所有集装箱</button>
+                <button id="clearBtn" class="btn">清除数据</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>PierTrucker 网页版 v1.0 | <a href="https://piertrucker.com" target="_blank">官方网站</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
